@@ -16,7 +16,7 @@
     
 </head>
 <body>
-    <h1>漢字にルビを振るサービス</h1>
+    <h1>ああああああああ</h1>
     <div>
         <textarea id="inputText" rows="5" cols="50" placeholder="文章を入力してください"></textarea>
         <button onclick="addRuby()">ルビを振る</button>
@@ -32,7 +32,7 @@
         // 漢字をひらがなに変換する関数
         function convertToHiragana(text) {
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", `https://labs.goo.ne.jp/api/hiragana?app_id=xxxxxxxxxxxxxxxx&sentence=${encodeURIComponent(text)}`, true);
+            xhr.open("GET", `https://labs.goo.ne.jp/api/hiragana?app_id=13a85b1ba8233c8fb605886b985e236b7f522a3c936959fb50ebd69ddc7cf878&sentence=${encodeURIComponent(text)}`, true);
             xhr.send();
 
             if (xhr.status === 200) {
