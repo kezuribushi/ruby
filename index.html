@@ -1,61 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>漢字にルビを振るサービス</title>
-    <style>
-        /* スタイルはここに追加してください */
-    </style>
-
-<script>
-    // CORSを許可するためのヘッダーを付与する
-    function setCorsHeaders() { var xhr = new XMLHttpRequest(); xhr.open('GET', 'https://kezuribushi.github.io/ruby/', true); xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'); xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type'); xhr.send(); } 
-    
-    </script>
-    
+    <title>Document</title>
 </head>
 <body>
-    <h1>ああああああああ</h1>
-    <div>
-        <textarea id="inputText" rows="5" cols="50" placeholder="文章を入力してください"></textarea>
-        <button onclick="addRuby()">ルビを振る</button>
-    </div>
-    <div id="output">
-        <!-- 結果はここに表示されます -->
-    </div>
-    <a href="http://www.goo.ne.jp/">
-        <img src="//u.xgoo.jp/img/sgoo.png" alt="supported by goo"
-        title="supported by goo">
-        </a>
-    <script>
-        // 漢字をひらがなに変換する関数
-        function convertToHiragana(text) {
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", `https://labs.goo.ne.jp/api/hiragana?app_id=13a85b1ba8233c8fb605886b985e236b7f522a3c936959fb50ebd69ddc7cf878&sentence=${encodeURIComponent(text)}`, true);
-            xhr.send();
-
-            if (xhr.status === 200) {
-                const response = JSON.parse(xhr.responseText);
-                return response.converted;
-            } else {
-                return text; // エラー時は変換せずにそのまま返す
-            }
-        }
-
-        function addRuby() {
-            const inputText = document.getElementById('inputText').value;
-            const output = document.getElementById('output');
-
-            // 文章内の漢字をひらがなに変換してルビを振る
-            const result = inputText.replace(/([\u4E00-\u9FFF]+)/g, (match, kanji) => {
-                const hiragana = convertToHiragana(kanji);
-                return `<ruby>${kanji}<rt>${hiragana}</rt></ruby>`;
-            });
-
-            // 結果を表示
-            output.innerHTML = result;
-        }
-    </script>
+    <p>あああああああああああ</p>
 </body>
 </html>
